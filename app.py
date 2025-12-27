@@ -472,7 +472,5 @@ def lookup_account():
         data = {"success": False, "message": f"خطأ في الخادم: {str(e)}", "data": {}}
         return Response(json.dumps(data, ensure_ascii=False), 
                        mimetype='application/json'), 500
+        
 
-if __name__ == '__main__':
-
-    app.run(host='0.0.0.0', port=8080, debug=False)
